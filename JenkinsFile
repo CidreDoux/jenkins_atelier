@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    options {
+        pollSCM('H/1 * * * *') // Scrute les changements toutes les minutes
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    if (env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'master') {
+                        sh 'mvn clean install'
+                    } else {
+                        sh 'mvn clean install -DskipTests'
+                    }
+                }
+            }
+        }
+    }
+}
