@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class main {
     //test
-    public static void main(String[] args) { // push 3
+    public static void main(String[] args) { // push 4
         // Créer un Map pour stocker les informations de carte bancaire et les codes PIN
         Map<String, Integer> cartesEtPins = new HashMap<>();
         cartesEtPins.put("123456789012", 1234);
