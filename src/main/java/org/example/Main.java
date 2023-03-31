@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-class main {
+class Main {
     //test
     public static void main(String[] args) { // push 4
         // Créer un Map pour stocker les informations de carte bancaire et les codes PIN
